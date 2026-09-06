@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://l50x4dtpd1i5"
+path="res://.godot/imported/Main Menu - Dark.wav-6bff39b020c5efc84d3909150dd35b18.sample"
+
+[deps]
+
+source_file="res://music/Main Menu - Dark.wav"
+dest_files=["res://.godot/imported/Main Menu - Dark.wav-6bff39b020c5efc84d3909150dd35b18.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

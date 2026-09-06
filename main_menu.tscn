@@ -5,6 +5,8 @@
 [ext_resource type="Script" uid="uid://k3cljth1nm2m" path="res://main_menu.gd" id="1_fu7sn"]
 [ext_resource type="AudioStream" uid="uid://l50x4dtpd1i5" path="res://music/Main Menu - Dark.wav" id="4_jix8l"]
 [ext_resource type="AudioStream" uid="uid://c472ewbn6yxd4" path="res://sounds/menu_7.wav" id="5_glbon"]
+[ext_resource type="AudioStream" uid="uid://bmeds3ksyx8xk" path="res://sounds/menu_21.wav" id="6_qe12f"]
+[ext_resource type="AudioStream" uid="uid://dtb271o8buhxs" path="res://sounds/menu_14.wav" id="7_8qtwp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0yd1l"]
 texture = ExtResource("1_7vrkn")
@@ -147,8 +149,15 @@ stream = ExtResource("4_jix8l")
 [node name="button_sound" type="AudioStreamPlayer2D" parent="." unique_id=687153985]
 stream = ExtResource("5_glbon")
 
+[node name="quit_sound" type="AudioStreamPlayer2D" parent="." unique_id=705234026]
+stream = ExtResource("6_qe12f")
+
+[node name="play_sound" type="AudioStreamPlayer2D" parent="." unique_id=2045209699]
+stream = ExtResource("7_8qtwp")
+
 [connection signal="focus_entered" from="main_menu/start_button" to="." method="_on_start_button_focus_entered"]
 [connection signal="mouse_entered" from="main_menu/start_button" to="." method="_on_start_button_mouse_entered"]
 [connection signal="pressed" from="main_menu/start_button" to="." method="_on_start_button_pressed"]
+[connection signal="focus_entered" from="main_menu/quit" to="." method="_on_quit_focus_entered"]
 [connection signal="mouse_entered" from="main_menu/quit" to="." method="_on_quit_mouse_entered"]
 [connection signal="pressed" from="main_menu/quit" to="." method="_on_quit_pressed"]

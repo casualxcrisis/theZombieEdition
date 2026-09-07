@@ -59,6 +59,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -5.0
+offset_right = -4.0
+offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_0yd1l")
@@ -70,12 +74,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -247.75
-offset_top = 86.0
-offset_right = 247.75
-offset_bottom = 230.0
+offset_left = -102.0
+offset_top = 5.0
+offset_right = 187.04169
+offset_bottom = 89.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.7160366, 0.7112542)
 theme_override_constants/separation = 8
 
 [node name="start_button" type="Button" parent="main_menu" unique_id=544857702]
@@ -85,7 +90,7 @@ theme_override_colors/font_color = Color(0.056291774, 0.056291528, 0.056291588, 
 theme_override_colors/font_pressed_color = Color(0.81302935, 0, 0.09602516, 1)
 theme_override_colors/font_hover_color = Color(0.3628292, 0.36282948, 0.36283022, 1)
 theme_override_fonts/font = ExtResource("1_06t4h")
-theme_override_font_sizes/font_size = 33
+theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_jix8l")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_06t4h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7vrkn")
@@ -98,7 +103,7 @@ theme_override_colors/font_color = Color(0.056291774, 0.056291528, 0.056291588, 
 theme_override_colors/font_pressed_color = Color(0.81302935, 0, 0.09602516, 1)
 theme_override_colors/font_hover_color = Color(0.3628292, 0.36282948, 0.36283022, 1)
 theme_override_fonts/font = ExtResource("1_06t4h")
-theme_override_font_sizes/font_size = 33
+theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_jix8l")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_06t4h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7vrkn")
@@ -109,16 +114,16 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -81.5
-offset_top = 300.0
-offset_right = 81.5
-offset_bottom = 323.0
+offset_left = -160.0
+offset_top = 59.0
+offset_right = 156.0
+offset_bottom = 95.0
 grow_horizontal = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 8
-theme_override_constants/shadow_offset_y = 19
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 3
 theme_override_fonts/font = ExtResource("1_06t4h")
-theme_override_font_sizes/font_size = 123
+theme_override_font_sizes/font_size = 31
 text = "Zombie Survivors"
 
 [node name="options_panel" type="Panel" parent="." unique_id=381544334]
@@ -154,6 +159,7 @@ stream = ExtResource("6_qe12f")
 
 [node name="play_sound" type="AudioStreamPlayer2D" parent="." unique_id=2045209699]
 stream = ExtResource("7_8qtwp")
+volume_db = -9.122
 
 [connection signal="focus_entered" from="main_menu/start_button" to="." method="_on_start_button_focus_entered"]
 [connection signal="mouse_entered" from="main_menu/start_button" to="." method="_on_start_button_mouse_entered"]

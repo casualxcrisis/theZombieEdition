@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://n2r4nw8fv8mj"]
+
+[ext_resource type="Script" uid="uid://hdq8tyyttsor" path="res://my_player_character/new_player.gd" id="1_n1dbg"]
+[ext_resource type="Texture2D" uid="uid://p827meghumth" path="res://PostApocalypse_AssetPack_v1.1.2/Character/Main/Run/Character_side-left_run_no-hands-Sheet6.png" id="1_pjd8l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0yd1l"]
+
+[sub_resource type="Animation" id="Animation_n1dbg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_7r0ru"]
+resource_name = "side_run"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.101519115, 0.20213181, 0.29911882, 0.40063795, 0.4994378),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_0fexo"]
+resource_name = "vertical_run"
+length = 0.53333336
+loop_mode = 1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0fexo"]
+_data = {
+&"RESET": SubResource("Animation_n1dbg"),
+&"side_run": SubResource("Animation_7r0ru"),
+&"vertical_run": SubResource("Animation_0fexo")
+}
+
+[node name="new_player" type="CharacterBody2D" unique_id=1852691010]
+script = ExtResource("1_n1dbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1918138798]
+shape = SubResource("CircleShape2D_0yd1l")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=357211089]
+texture = ExtResource("1_pjd8l")
+hframes = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=787450826]
+libraries/ = SubResource("AnimationLibrary_0fexo")

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d0gabhcsnd3og"]
+
+[ext_resource type="PackedScene" uid="uid://dslttydx7ip0y" path="res://animated_player_redux.tscn" id="1_6a2uw"]
+[ext_resource type="Script" uid="uid://5r5cp8xjbksn" path="res://player_remix.gd" id="1_205c8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0yd1l"]
+radius = 9.0
+
+[node name="player_remix" type="CharacterBody2D" unique_id=1750420408]
+script = ExtResource("1_205c8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1613489527]
+shape = SubResource("CircleShape2D_0yd1l")
+
+[node name="animated_player_redux" parent="." unique_id=1378998290 instance=ExtResource("1_6a2uw")]

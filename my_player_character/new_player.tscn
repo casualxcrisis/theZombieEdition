@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://n2r4nw8fv8mj"]
 
 [ext_resource type="Script" uid="uid://hdq8tyyttsor" path="res://my_player_character/new_player.gd" id="1_n1dbg"]
-[ext_resource type="Texture2D" uid="uid://p827meghumth" path="res://PostApocalypse_AssetPack_v1.1.2/Character/Main/Run/Character_side-left_run_no-hands-Sheet6.png" id="1_pjd8l"]
+[ext_resource type="Texture2D" uid="uid://choi53yi6m6vm" path="res://zom_char_move_test.png" id="2_n1dbg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0yd1l"]
 
@@ -20,6 +20,26 @@ tracks/0/keys = {
 "values": [0]
 }
 
+[sub_resource type="Animation" id="Animation_2s4rr"]
+resource_name = "idle_animation"
+
+[sub_resource type="Animation" id="Animation_wwny3"]
+resource_name = "run_up"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 14, 15, 16, 17]
+}
+
 [sub_resource type="Animation" id="Animation_7r0ru"]
 resource_name = "side_run"
 length = 0.6
@@ -31,20 +51,34 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.101519115, 0.20213181, 0.29911882, 0.40063795, 0.4994378),
+"times": PackedFloat32Array(0, 0.1014641, 0.2006222, 0.30323932, 0.4000914, 0.5004025),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9, 10, 11]
+}
+
+[sub_resource type="Animation" id="Animation_0fexo"]
+resource_name = "vertical_run"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.10168002, 0.19994222, 0.29991335, 0.4007389, 0.50071007),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5]
 }
 
-[sub_resource type="Animation" id="Animation_0fexo"]
-resource_name = "vertical_run"
-length = 0.53333336
-loop_mode = 1
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0fexo"]
 _data = {
 &"RESET": SubResource("Animation_n1dbg"),
+&"idle_animation": SubResource("Animation_2s4rr"),
+&"run_up": SubResource("Animation_wwny3"),
 &"side_run": SubResource("Animation_7r0ru"),
 &"vertical_run": SubResource("Animation_0fexo")
 }
@@ -56,8 +90,8 @@ script = ExtResource("1_n1dbg")
 shape = SubResource("CircleShape2D_0yd1l")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=357211089]
-texture = ExtResource("1_pjd8l")
-hframes = 6
+texture = ExtResource("2_n1dbg")
+hframes = 18
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=787450826]
 libraries/ = SubResource("AnimationLibrary_0fexo")

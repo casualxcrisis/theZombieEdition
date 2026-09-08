@@ -11,6 +11,8 @@ func _process(_delta):
 		_animation_player.play('side_run')
 	elif Input.is_action_pressed('move_down'):
 		_animation_player.play('vertical_run')
+	elif Input.is_action_pressed("move_up"):
+		_animation_player.play('run_up')
 	else:
 		_animation_player.stop()
 

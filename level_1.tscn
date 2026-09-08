@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bn1bxi4ijnn0a" path="res://PostApocalypse_AssetPack_v1.1.2/Objects/Vehicles/Normal/Car_4/Car_4_Red.png" id="3_rka8t"]
 [ext_resource type="Texture2D" uid="uid://dk3ot2vkktpan" path="res://PostApocalypse_AssetPack_v1.1.2/Tiles/Wire-Fence/Wire-Fence_TileSet.png" id="4_bjebc"]
 [ext_resource type="Texture2D" uid="uid://c5vdjweehsint" path="res://PostApocalypse_AssetPack_v1.1.2/Objects/Vehicles/Normal/Car_3_Van/Car_3_Light-Green_Van.png" id="4_rka8t"]
-[ext_resource type="PackedScene" uid="uid://n2r4nw8fv8mj" path="res://my_player_character/new_player.tscn" id="8_bjebc"]
+[ext_resource type="PackedScene" uid="uid://d0gabhcsnd3og" path="res://player_remix.tscn" id="8_bjebc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hbghi"]
 texture = ExtResource("1_3hls8")
@@ -441,5 +441,5 @@ position = Vector2(48.999996, 24.999996)
 rotation = -0.19042398
 texture = ExtResource("4_rka8t")
 
-[node name="new_player" parent="." unique_id=1852691010 instance=ExtResource("8_bjebc")]
-position = Vector2(58, 162)
+[node name="player_remix" parent="." unique_id=1750420408 instance=ExtResource("8_bjebc")]
+position = Vector2(38, 68)

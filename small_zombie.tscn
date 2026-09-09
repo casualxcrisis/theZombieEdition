@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://cgkbqfnhfvxhr"]
+
+[ext_resource type="Script" uid="uid://b7gioo8ph072i" path="res://small_zombie.gd" id="1_32gnm"]
+[ext_resource type="Texture2D" uid="uid://dws311vip4hqh" path="res://PostApocalypse_AssetPack_v1.1.2/Enemies/Zombie_Small/Zombie_Small_Side_Walk-Sheet6.png" id="1_jhuxr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0yd1l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32gnm"]
+atlas = ExtResource("1_jhuxr")
+region = Rect2(0, 0, 13, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcfgi"]
+atlas = ExtResource("1_jhuxr")
+region = Rect2(13, 0, 13, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtqx2"]
+atlas = ExtResource("1_jhuxr")
+region = Rect2(26, 0, 13, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npu8l"]
+atlas = ExtResource("1_jhuxr")
+region = Rect2(39, 0, 13, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pl43j"]
+atlas = ExtResource("1_jhuxr")
+region = Rect2(52, 0, 13, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vspd0"]
+atlas = ExtResource("1_jhuxr")
+region = Rect2(65, 0, 13, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0yd1l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32gnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcfgi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtqx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_npu8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pl43j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vspd0")
+}],
+"loop": 1,
+"name": &"zombie_walk",
+"speed": 6.0
+}]
+
+[node name="small_zombie" type="CharacterBody2D" unique_id=2104402772]
+script = ExtResource("1_32gnm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1839530513]
+position = Vector2(0, 1)
+scale = Vector2(0.6799996, 0.5780853)
+shape = SubResource("CapsuleShape2D_0yd1l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2051438521]
+sprite_frames = SubResource("SpriteFrames_0yd1l")
+animation = &"zombie_walk"
+frame = 2
+frame_progress = 0.40246078

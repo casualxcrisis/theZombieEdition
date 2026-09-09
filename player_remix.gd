@@ -1,9 +1,6 @@
 extends CharacterBody2D
 
-signal health_depleted
-
 @onready var _animated_sprite = $animated_player_redux
-var health = 100.0
 
 func _process(_delta):
 	if Input.is_action_pressed('move_left'):

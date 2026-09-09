@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://c5vdjweehsint" path="res://PostApocalypse_AssetPack_v1.1.2/Objects/Vehicles/Normal/Car_3_Van/Car_3_Light-Green_Van.png" id="4_rka8t"]
 [ext_resource type="PackedScene" uid="uid://d0gabhcsnd3og" path="res://player_remix.tscn" id="8_bjebc"]
 [ext_resource type="PackedScene" uid="uid://dl31347ggow67" path="res://world_boundary.tscn" id="10_gyffv"]
-[ext_resource type="PackedScene" uid="uid://7mooxo0qqyog" path="res://new_mob.tscn" id="11_1pe0h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hbghi"]
 texture = ExtResource("1_3hls8")
@@ -480,6 +479,3 @@ scale = Vector2(0.22321469, 0.14170066)
 position = Vector2(38, 41.000004)
 rotation = 2.9966912
 scale = Vector2(0.22321469, 0.14170066)
-
-[node name="new_mob" parent="." unique_id=1225378956 instance=ExtResource("11_1pe0h")]
-position = Vector2(29, 94)

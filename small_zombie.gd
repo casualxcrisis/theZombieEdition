@@ -1,25 +1,14 @@
 extends CharacterBody2D
 
-
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+@onready var player = get_node("/root/level1/player_remix")
 
 
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+func _ready():
+	$animated_small_zombie.play("zombie_left_walk")
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+@warning_ignore("unused_parameter")
+func _physics_process(delta):
+	var direction = global_position.direction_to(player.global_position)
+	velocity = direction * 30.0
 	move_and_slide()
